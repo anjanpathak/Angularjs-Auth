@@ -17,7 +17,7 @@ import models._
  */
 trait Security { self: Controller =>
 
-  implicit def app: play.api.Application = play.api.Play.current
+  implicit val app: play.api.Application = play.api.Play.current
 
   val AuthTokenHeader = "X-XSRF-TOKEN"
   val AuthTokenCookieKey = "XSRF-TOKEN"
